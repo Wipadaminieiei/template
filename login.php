@@ -1,14 +1,14 @@
 <?php
 session_start();
-        if(isset($_POST['Email'])){
+        if(isset($_POST['Username'])){
 				//connection
                   include("connection.php");
 				//รับค่า user & password
-                  $Email = $_POST['Email'];
+                  $Username = $_POST['Username'];
                   $Password = md5($_POST['Password']);
 				//query
 
-                $query="SELECT * FROM member Where Email='".$Email."' and Password='".$Password."' ";
+                $query="SELECT * FROM member Where Username='".$Username."' and Password='".$Password."' ";
 
                  $result = mysqli_query($con,$query);
 
@@ -24,14 +24,14 @@ session_start();
 
 
                         echo "<script>";
-                            echo "alert(\"ยินดีต้อนรับ ADMIN: $Name\");";
+                            echo "alert(\"ยินดีต้อนรับ ADMIN: $Username\");";
                             echo "window.location = 'ประวัติของลูกค้า.php';";
                         echo "</script>";
                       }
 
                       if ($_SESSION["Userlevel"]=="M"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
                         echo "<script>";
-                            echo "alert(\"ยินดีต้อนรับ คุณ $Name\");";
+                            echo "alert(\"ยินดีต้อนรับ คุณ $Username\");";
                             echo "window.location = 'index.php';";
                         echo "</script>";
 
@@ -40,7 +40,7 @@ session_start();
 
                   }else{
                     echo "<script>";
-                        echo "alert(\" Email หรือ  password ไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง\");";
+                        echo "alert(\" Username หรือ  password ไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง\");";
                         echo "window.history.back()";
                     echo "</script>";
 
@@ -49,7 +49,8 @@ session_start();
         }else{
 
 
-             Header("Location: form_เข้าสู่ระบบ.php"); //user & password incorrect back to login again
+             Header("Location: เข้าสู่ระบบ.php"); //user & password incorrect back to login again
 
         }
+
 ?>

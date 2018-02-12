@@ -55,17 +55,17 @@
   <div class="w3-container w3-yellow">
     
   </div>
-  <form class="w3-container" 
+  <form method="post" class="w3-container" name="frmlogin" action="login.php">
     <p>      
-    <h3><label class="w3-text-yellow"><b>Email</b></label></h3>
-    <input class="w3-input w3-border w3-sand" name="first" type="text"></p>
+    <h3><label class="w3-text-yellow"><b>Username</b></label></h3>
+    <input class="w3-input w3-border w3-sand" id="Username" required name="Username" type="text"></p>
     <p>      
     	<br/>
      <h3><label class="w3-text-yellow"><b>Password</b></label></h3>
-    <input class="w3-input w3-border w3-sand" name="last" type="text"></p>
+    <input class="w3-input w3-border w3-sand" id="Password" required name="Password" type="Password"></p>
     <p>
     	 <br/>
-    <h2><button class="w3-btn w3-yellow">เข้าสู่ระบบ</button></h2></p>
+    <h2><button class="w3-btn w3-yellow" type="submit" id="Login">เข้าสู่ระบบ</button></h2></p>
   </form>
 							
 				</section>

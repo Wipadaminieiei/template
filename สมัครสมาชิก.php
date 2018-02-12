@@ -9,6 +9,7 @@ $mysqli->query("set names utf8");
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		$Name = $mysqli->real_escape_string($_POST['Name']);
+		$Username = $mysqli->real_escape_string($_POST['Username']);
 		$Lastname = $mysqli->real_escape_string($_POST['Lastname']);
 		$Email = $mysqli->real_escape_string($_POST['Email']);
 		$Numberphone = $mysqli->real_escape_string($_POST['Numberphone']);
@@ -25,8 +26,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		} else {
 			header("location: เข้าสู่ระบบ.php");
-			$sql = "INSERT INTO member (Name, Lastname, Email, Numberphone,  Password)"
-			. "VALUES('$Name', '$Lastname', '$Email', '$Numberphone',  '$Password')";
+			$sql = "INSERT INTO member (Name, Lastname, Email, Numberphone,  Password, Username)"
+			. "VALUES('$Name', '$Lastname', '$Email', '$Numberphone',  '$Password', '$Username')";
 //เก็บข้อมูลลง DB
 
 			if($mysqli->query($sql) == true)
@@ -114,6 +115,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     	<br/>
      <h3><label class="w3-text-yellow"><b>Email</b></label></h3>
     <input class="w3-input w3-border w3-sand" name="Email" required type="text"></p>
+    <p>
+    	<br/>
+    	<h3><label class="w3-text-yellow"><b>Username</b></label></h3>
+    <input class="w3-input w3-border w3-sand" name="Username" required type="text"></p>
     <p>
     	<br/>
      <h3><label class="w3-text-yellow"><b>Password</b></label></h3>

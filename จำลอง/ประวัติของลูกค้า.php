@@ -1,3 +1,13 @@
+
+<?php session_start();?>
+
+<?php
+include('connection.php');
+if (!$_SESSION["UserID"]){  //check session
+
+	  Header("Location: เข้าสู่ระบบ.php"); //ไม่พบผู้ใช้กระโดดกลับไปหน้า login form
+
+}else{?>
 <!DOCTYPE HTML>
 <!--
 	Twenty by HTML5 UP
@@ -123,4 +133,4 @@
 
 	</body>
 </html>
-
+<?php }?>
