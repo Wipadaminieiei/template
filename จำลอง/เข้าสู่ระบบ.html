@@ -1,4 +1,3 @@
-<?php session_start();?>
 <!DOCTYPE HTML>
 <!--
 	Twenty by HTML5 UP
@@ -24,13 +23,12 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.php"><img src="images/1.jpg" width="100" height="100"></a></h1>
+					<h1 id="logo"><img src="images/1.jpg" width="100" height="100"></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.php">Welcome</a></li>
-							<li class="current"><a href="คำแนะนำ.php">คำแนะนำ</a></li>
-							<li class="current"><a href="index.php">ติดต่อเรา</a></li>
-							<li><a href="สมัครสมาชิก.php " class="button special">สมัครสมาชิก</a></li>
+							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="คำแนะนำ.html">คำแนะนำการใช้</a></li>
+							<li class="current"><a href="index.html">ติดต่อเรา</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -51,22 +49,18 @@
 						</header>
 						
 							
-    					<div class="w3-card-4">
-  <div class="w3-container w3-yellow">
-    
-  </div>
-  <form class="w3-container" 
-    <p>      
-    <h3><label class="w3-text-yellow"><b>Email</b></label></h3>
-    <input class="w3-input w3-border w3-sand" name="first" type="text"></p>
-    <p>      
-    	<br/>
-     <h3><label class="w3-text-yellow"><b>Password</b></label></h3>
-    <input class="w3-input w3-border w3-sand" name="last" type="text"></p>
-    <p>
-    	 <br/>
-    <h2><button class="w3-btn w3-yellow">เข้าสู่ระบบ</button></h2></p>
-  </form>
+    						<div id="login">
+      						<form name='form-login'>
+        						<span class="fontawesome-user"></span>
+          						<input type="text" id="user" placeholder="Username">
+       
+        						<span class="fontawesome-lock"></span>
+          						<input type="password" id"pass" placeholder="Password">
+        						<br />
+        						<a href="ประวัติของลูกค้า.html" class="w3-button w3-black" type="submit" value="Login">Login</a>
+
+	  						</form>
+							</div>
 							
 				</section>
 
